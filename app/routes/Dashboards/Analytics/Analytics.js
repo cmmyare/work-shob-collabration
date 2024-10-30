@@ -32,7 +32,7 @@ import { AudienceMetricsChart } from "./components/AudienceMetricsChart";
 import { TinyAreaChart } from "../../components/Analytics/TinyAreaChart";
 import { SimpleLineChart } from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
-import classes from "./Analytics.scss";
+import "./Analytics.css"; // Import CSS for styling
 
 const LAYOUT = {
   "metric-v-target-users": { h: 6, md: 4 },
@@ -47,15 +47,13 @@ const LAYOUT = {
 };
 
 const SessionByDevice = (props) => (
-  <div className={classes["session"]}>
-    <div className={classes["session__title"]}>{props.title}</div>
-    <div className={classes["session__values"]}>
-      <div className={`${classes["session__percentage"]} text-${props.color}`}>
+  <div className="session">
+    <div className="session__title">{props.title}</div>
+    <div className="session__values">
+      <div className={`session__percentage text-${props.color}`}>
         {props.valuePercent}%
       </div>
-      <div className={`${classes["session__value"]} text-${props.color}`}>
-        {props.value}
-      </div>
+      <div className={`session__value text-${props.color}`}>{props.value}</div>
     </div>
   </div>
 );
@@ -82,10 +80,8 @@ export class Analytics extends React.Component {
 
     return (
       <React.Fragment>
-
-        <h1>Registration</h1>
+        <h1>Dashboards</h1>
       </React.Fragment>
-      
     );
   }
 }

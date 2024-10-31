@@ -1,10 +1,12 @@
 import React from "react";
 import { faker } from "@faker-js/faker";
-import { Container, Row, Table, Col } from "./../../../components";
+import { Container, Row, Table, Col, Form, FormGroup, Label, Input } from "./../../../components";
 
 import { HeaderMain } from "../../components/HeaderMain";
 import { CardSystem } from "./components/CardSystem";
 import { TrSystem } from "./components/trSystem";
+import { HeaderDemo } from "../../components/HeaderDemo";
+import { CustomInput } from "reactstrap";
 
 const TrColors = [
   {
@@ -27,55 +29,152 @@ const TrColors = [
 
 const System = () => (
   <Container>
-    <Row className="mb-5">
-      <Col lg={12}>
-        <HeaderMain title="System" className="mb-4 mb-lg-5" />
-      </Col>
-      <Col lg={3} md={6}>
-        <CardSystem title="Memory" badgeColor="primary" pieColor="primary" />
-      </Col>
-      <Col lg={3} md={6}>
-        <CardSystem
-          title="CPU"
-          unit="Mb"
-          badgeColor="purple"
-          pieColor="purple"
-        />
-      </Col>
-      <Col lg={3} md={6}>
-        <CardSystem
-          title="Traffic"
-          unit="Kb"
-          badgeColor="success"
-          pieColor="success"
-        />
-      </Col>
-      <Col lg={3} md={6}>
-        <CardSystem title="Disk I/O" unit="Kb" pieColor="yellow" />
-      </Col>
-      <Col lg={12}>
-        <h6 className="mt-5">Processes</h6>
-        <p className="pb-3">{faker.lorem.paragraphs()}</p>
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Memory</th>
-              <th>CPU</th>
-              <th>Traffic</th>
-              <th>Disk I/O</th>
-            </tr>
-          </thead>
-          <tbody>
-            <TrSystem colors={TrColors} />
-            <TrSystem colors={TrColors} />
-            <TrSystem colors={TrColors} />
-            <TrSystem colors={TrColors} />
-            <TrSystem colors={TrColors} />
-          </tbody>
-        </Table>
-      </Col>
-    </Row>
+      <Form>
+                                { /* START Input */}
+                                <FormGroup  row>
+                                    <Label for="input" sm={3}>
+                                        Input
+                                    </Label>
+                                    
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="" 
+                                            name="" 
+                                            id="input" 
+                                            placeholder="" 
+                                        />
+                                    </Col>
+                                </FormGroup>
+
+                                
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="inputPassword" sm={3}>
+                                        Password
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="password" 
+                                            name="password" 
+                                            id="inputPassword" 
+                                            placeholder="" 
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="inputPasswordPlaceholder" sm={3}>
+                                        Input Placeholder
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="email" 
+                                            name="email" 
+                                            id="inputPasswordPlaceholder" 
+                                            placeholder="Placeholder..." 
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="inputPasswordReadonly" sm={3}>
+                                        Input Readonly
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="" 
+                                            name="email" 
+                                            id="inputPasswordReadonly" 
+                                            placeholder="Readonly Input..." 
+                                            readOnly
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="inputPasswordDisabled" sm={3}>
+                                        Input Disabled
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="" 
+                                            name="" 
+                                            id="inputPasswordDisabled" 
+                                            placeholder="Disabled" 
+                                            disabled
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Select */}
+                                <FormGroup row>
+                                    <Label for="defaultSelect" sm={3}>
+                                        Default Select
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="select" 
+                                            name="select" 
+                                            id="defaultSelect" 
+                                        >
+                                            <option defaultValue="">Open this Select Menu</option>
+                                            <option>One</option>
+                                            <option>Two</option>
+                                            <option>Three</option>
+                                        </Input>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Select */}
+                                { /* START Select */}
+                                <FormGroup row>
+                                    <Label for="customSelect" sm={3}>
+                                        Custom Select
+                                    </Label>
+                                    <Col sm={9}>
+                                    
+                                        <CustomInput 
+                                            type="select" 
+                                            name="customSelect" 
+                                            id="customSelect"  
+                                        >
+                                            <option defaultValue="">Open this Select Menu</option>
+                                            <option>One</option>
+                                            <option>Two</option>
+                                            <option>Three</option>
+                                        </CustomInput>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Select */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="staticText" sm={3}>
+                                        Static Text
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input plaintext initialValue="static@text.com" />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="textArea" sm={3}>
+                                        Textarea
+                                    </Label>
+                                    <Col sm={9}>
+                                        <Input 
+                                            type="textarea" 
+                                            name="text" 
+                                            id="textArea" 
+                                            placeholder="Enter text..." 
+                                        />
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
   </Container>
 );
 

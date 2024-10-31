@@ -28,6 +28,22 @@ export const SidebarMiddleNav = () => (
     </SidebarMenu.Item> */}
     {/* -------- Forms ---------*/}
     <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-check-square-o"></i>}
+            title="Forms"
+        >
+            <SidebarMenu.Item title="Forms" to='/forms/forms' />
+            <SidebarMenu.Item title="Forms Layouts" to='/forms/forms-layouts' />
+            <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
+            <SidebarMenu.Item title="Wizard" to='/forms/wizard' />
+            <SidebarMenu.Item title="Text Mask" to='/forms/text-mask' />
+            <SidebarMenu.Item title="Typeahead" to='/forms/typeahead' />
+            <SidebarMenu.Item title="Toggles" to='/forms/toggles' />
+            <SidebarMenu.Item title="Editor" to='/forms/editor' />
+            <SidebarMenu.Item title="Date Picker" to='/forms/date-picker' />
+            <SidebarMenu.Item title="Dropzone" to='/forms/dropzone' />
+            <SidebarMenu.Item title="Sliders" to='/forms/sliders' />
+        </SidebarMenu.Item>
+    <SidebarMenu.Item
       icon={<i className="fa fa-fw fa-check-square-o"></i>}
       title="Admin Panel"
     >

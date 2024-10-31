@@ -106,7 +106,7 @@ import { SidebarANavbar } from "./../layout/components/SidebarANavbar";
 import { SidebarASidebar } from "./../layout/components/SidebarASidebar";
 
 //------ Route Definitions --------
-// eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-varsC
 export const RoutedContent = () => {
   return (
     <Switch>
@@ -160,7 +160,7 @@ export const RoutedContent = () => {
             <Route component={ Calendar } path="/interface/calendar" /> */}
 
       {/*    Forms Routes    */}
-      {/* <Route component={ Forms } path="/forms/forms" />
+      <Route component={ Forms } path="/forms/forms" />
             <Route component={ FormsLayouts } path="/forms/forms-layouts" />
             <Route component={ InputGroups } path="/forms/input-groups" />
             <Route component={ Wizard } path="/forms/wizard" />
@@ -171,7 +171,7 @@ export const RoutedContent = () => {
             <Route component={ DatePicker } path="/forms/date-picker" />
             <Route component={ Dropzone } path="/forms/dropzone" />
             <Route component={ Sliders } path="/forms/sliders" />
-             */}
+            
       {/*    Graphs Routes   */}
       <Route component={ReCharts} path="/graphs/re-charts" />
 

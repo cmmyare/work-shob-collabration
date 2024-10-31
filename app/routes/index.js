@@ -110,10 +110,11 @@ import { SidebarASidebar } from "./../layout/components/SidebarASidebar";
 export const RoutedContent = () => {
   return (
     <Switch>
-      <Redirect from="/" to="/projects" exact />
+      <Redirect from="/" to="/Pages/Login" exact />
 
       <Route path="/dashboards/analytics" exact component={Analytics} />
       <Route path="/projects" exact component={ProjectsDashboard} />
+      
       <Route path="/dashboards/system" exact component={System} />
       <Route path="/dashboards/monitor" exact component={Monitor} />
 
@@ -210,10 +211,10 @@ export const RoutedContent = () => {
             <Route component={ Danger } path="/pages/danger" />
             <Route component={ Error404 } path="/pages/error-404" />
             <Route component={ ForgotPassword } path="/pages/forgot-password" />
-            <Route component={ LockScreen } path="/pages/lock-screen" />
+            <Route component={ LockScreen } path="/pages/lock-screen" /> */}
             <Route component={ Login } path="/pages/login" />
             <Route component={ Register } path="/pages/register" />
-            <Route component={ Success } path="/pages/success" />
+            {/* <Route component={ Success } path="/pages/success" />
             <Route component={ Timeline } path="/pages/timeline" /> */}
 
       {/* <Route path='/icons' exact component={Icons} /> */}

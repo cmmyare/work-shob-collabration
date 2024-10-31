@@ -12,7 +12,11 @@ export const SidebarMiddleNav = () => (
 
       <SidebarMenu.Item title="Analytics" to="/dashboards/analytics" exact />
       {/* <SidebarMenu.Item title="Projects" to="/dashboards/projects" exact /> */}
-      <SidebarMenu.Item title="System" to="/dashboards/system" exact />
+      <SidebarMenu.Item
+        title="Incident Register"
+        to="/dashboards/system"
+        exact
+      />
       <SidebarMenu.Item title="Monitor" to="/dashboards/monitor" exact />
       <SidebarMenu.Item title="Financial" to="/dashboards/financial" exact />
       {/* <SidebarMenu.Item title="Stock" to='/dashboards/stock' exact />
